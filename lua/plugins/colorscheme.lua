@@ -3,7 +3,7 @@ return {
     "folke/tokyonight.nvim",
     opts = {
       transparent = true,
-      style = "storm",
+      style = "night",
       terminal_colors = true,
       styles = {
         sidebars = "transparent",
