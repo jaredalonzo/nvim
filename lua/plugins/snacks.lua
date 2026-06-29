@@ -32,6 +32,7 @@ return {
           },
         },
       },
+      terminal = {},
     },
     keys = {
       {
