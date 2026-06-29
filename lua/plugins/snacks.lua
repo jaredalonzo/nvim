@@ -32,15 +32,16 @@ return {
           },
         },
       },
-      terminal = {},
-    },
-    keys = {
-      {
-        "<leader>e",
-        function()
-          Snacks.explorer()
-        end,
-        desc = "Toggle Snacks Explorer (Root)",
+      terminal = {
+        win = {
+          position = "float",
+          height = 0.8,
+          width = 0.8,
+          border = "rounded",
+          wo = {
+            winbar = "%#Title# 󰆍 %{get(b:, 'term_title', 'Terminal')} %*",
+          },
+        },
       },
     },
   },
