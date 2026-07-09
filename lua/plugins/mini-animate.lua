@@ -1,5 +1,5 @@
 return {
-  "echasnovski/mini.animate",
+  "nvim-mini/mini.animate",
   opts = function(_, opts)
     local animate = require("mini.animate")
     opts.cursor = vim.tbl_deep_extend("force", opts.cursor or {}, {
