@@ -3,7 +3,7 @@ return {
   opts = function(_, opts)
     local animate = require("mini.animate")
     opts.cursor = vim.tbl_deep_extend("force", opts.cursor or {}, {
-      timing = animate.gen_timing.linear({ duration = 40, unit = "total" }),
+      timing = animate.gen_timing.linear({ duration = 50, unit = "total" }),
       path = animate.gen_path.line({
         predicate = function(destination)
           -- animate if moving 2+ lines or 2+ columns
