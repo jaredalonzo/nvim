@@ -38,6 +38,8 @@ return {
           height = 0.8,
           width = 0.8,
           border = "rounded",
+          title = " 󰆍 Terminal ",
+          title_pos = "center",
           wo = {
             winbar = "%#Title# 󰆍 %{get(b:, 'term_title', 'Terminal')} %*",
           },
