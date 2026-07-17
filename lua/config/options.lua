@@ -12,3 +12,5 @@ vim.opt.linebreak = true
 vim.opt.breakindent = true
 vim.opt.showbreak = "↳ "
 vim.opt.breakindentopt = "shift:2"
+
+vim.o.winborder = "rounded"
