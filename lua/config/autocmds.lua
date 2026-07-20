@@ -47,3 +47,21 @@ vim.api.nvim_create_autocmd("FileType", {
     end)
   end,
 })
+
+-- Ensure .venv is correctly set for Python projects
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "python",
+  callback = function(args)
+    local root = vim.fs.root(args.buf, { ".venv" })
+    if not root then
+      return
+    end
+    local py = root .. "/.venv/bin/python"
+    if vim.fn.executable(py) == 1 then
+      local ok, vs = pcall(require, "venv-selector")
+      if ok then
+        vs.activate_from_path(py)
+      end
+    end
+  end,
+})
