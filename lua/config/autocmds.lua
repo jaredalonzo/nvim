@@ -16,3 +16,11 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     vim.api.nvim_set_hl(0, "LazyNormal", { bg = "none" })
   end,
 })
+
+-- Force white foreground in the sidekick & snacks terminal floating windows
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "snacks_terminal", "sidekick_terminal" },
+  callback = function()
+    vim.wo.winhighlight = "Normal:TermFloatNormal,NormalFloat:TermFloatNormal"
+  end,
+})
