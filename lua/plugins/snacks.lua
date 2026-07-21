@@ -25,6 +25,18 @@ return {
       picker = {
         hidden = true, -- show hidden files
         ignored = true, -- show git-ignored files
+        win = {
+          input = {
+            keys = {
+              ["<c-q>"] = false, -- don't send-to-quickfix; free up C-q
+            },
+          },
+          list = {
+            keys = {
+              ["<c-q>"] = false,
+            },
+          },
+        },
         sources = {
           explorer = {
             hidden = true,
