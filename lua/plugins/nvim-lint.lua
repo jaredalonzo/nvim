@@ -7,7 +7,8 @@ return {
     },
     linters = {
       ["markdownlint-cli2"] = {
-        args = { "--config", vim.fn.expand("~/.config/nvim/markdownlint.jsonc"), "--" },
+        -- use project-local .markdownlint* config discovery
+        args = { "--" },
       },
       mypy = {
         -- resolve imports/stubs from the project's .venv
