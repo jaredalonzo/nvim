@@ -6,6 +6,9 @@ return {
         enabled = true,
         backend = "tmux",
       },
+      tools = {
+        claude = { native_scroll = true },
+      },
       win = {
         layout = "float",
         float = {
