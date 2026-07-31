@@ -11,6 +11,9 @@ return {
       },
       win = {
         layout = "float",
+        keys = {
+          stopinsert = false,
+        },
         float = {
           border = "rounded",
           width = 0.7,
