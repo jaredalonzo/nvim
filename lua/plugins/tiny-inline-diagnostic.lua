@@ -18,7 +18,9 @@ return {
     -- By default only the FIRST diagnostic on the cursor line gets the CursorLine
     -- background band; subsequent ones are forced transparent (NoBg). Give every
     -- diagnostic on the cursor line the same band by treating it as index_diag == 1.
-    local hl = require("tiny-inline-diagnostic.highlights")
+    -- cast to a plain table: we're intentionally overriding a module function,
+    -- so treat it as mutable rather than a typed class field (avoids duplicate-set-field)
+    local hl = require("tiny-inline-diagnostic.highlights") --[[@as table]]
     local orig = hl.get_diagnostic_highlights
     hl.get_diagnostic_highlights = function(blend_factor, diag_ret, curline, index_diag)
       if diag_ret.line == curline and not diag_ret.need_to_be_under then
