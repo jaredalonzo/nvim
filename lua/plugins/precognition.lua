@@ -5,9 +5,8 @@ return {
     -- show hints as soon as you enter a buffer (toggle off if it feels noisy)
     startVisible = true,
     showBlankVirtLine = true,
-    highlightFullVirtLine = true, -- pad the hint line to full width so the bg shows
-    -- comment-colored hints on a subtle highlighted line (tokyonight values; tweak to taste)
-    highlightColor = { fg = "#565f89", bg = "#292e42" },
+    -- bright yellow hints, bold, no background (transparent virt line)
+    highlightColor = { fg = "#ffc777", bold = true, italic = true },
     targetedMotionHints = {
       enabled = false,
     },
