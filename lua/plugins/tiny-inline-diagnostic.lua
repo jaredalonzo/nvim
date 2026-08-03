@@ -4,6 +4,7 @@ return {
   priority = 1000, -- load early so it wins over other diagnostic UI
   opts = {
     preset = "modern", -- try: "classic", "minimal", "powerline", "ghost", "simple"
+    transparent_bg = true, -- no background box; blends with transparent tokyonight
     options = {
       show_source = false, -- set true to show the linter/LSP name (e.g. "mypy")
       multilines = true, -- render multi-line messages instead of truncating
